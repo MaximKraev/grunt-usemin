@@ -101,7 +101,7 @@ module.exports = function (grunt) {
         // ext-specific directives handling and replacement of blocks
         var proc = new processors[options.type](filedir, '', content, revvedfinder, function (msg) {
           grunt.log.writeln(msg);
-        });
+        }, options);
 
         content = proc.process();
         // write the new content to disk
