@@ -1,5 +1,5 @@
 {
-  "name": "grunt-usemin",
+  "name": "grunt-usemin-codio",
   "version": "0.1.10",
   "description": "Grunt task replaces references to non-optimized scripts or stylesheets into a set of HTML files (or any templates/views).",
   "keywords": [
@@ -9,13 +9,13 @@
     "yeoman",
     "html"
   ],
-  "homepage": "https://github.com/yeoman/grunt-usemin",
-  "bugs": "https://github.com/yeoman/grunt-usemin/issues",
-  "author": "Chrome Developer Relations",
+  "homepage": "https://github.com/MaximKraev/grunt-usemin",
+  "bugs": "https://github.com/MaximKraev/grunt-usemin/issues",
+  "author": "Codio",
   "main": "Gruntfile.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/yeoman/grunt-usemin.git"
+    "url": "git://github.com/MaximKraev/grunt-usemin.git"
   },
   "scripts": {
     "test": "grunt"
