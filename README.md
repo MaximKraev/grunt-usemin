@@ -105,7 +105,8 @@ usemin: {
   html: ['**/*.html'],
   css: ['**/*.css'],
   options: {
-    dirs: ['temp', 'dist']
+    dirs: ['temp', 'dist'],
+	datatags: false, // exclude datatags from processing
   }
 }
 ```
@@ -128,6 +129,13 @@ Change the basedir that represent the location of the transformed file. For exam
 +--- views
     \ index.html
 ```
+### Exclude regexps rules from HTML processing
+Possible keys to exclude to speedup our build: script, css, image, require, datatags, background, anchors, input
+
+### customRule
+Type: 'Array'
+Default: nil
+Specify your custom rule for processing HTML files.
 
 By default, if the file to be transformed is `index.html`, the images, scripts, ... referenced by this file will be considered are being in the `views` directory, whereas they must be linked to the `styles` directory.
 

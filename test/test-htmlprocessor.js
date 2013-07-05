@@ -378,6 +378,20 @@ describe('htmlprocessor', function () {
       var replaced = hp.replaceWithRevved();
       assert.equal(replaced, '<input type="image" src="' + filemapping['image.png'] + '" />');
     });
+
+    it('should replace by customRule', function () {
+      //test with example from image
+      var content = '<input type="image" src="image.png" />';
+      var options = {
+        customRule: [
+          /<input[^\>]+src=['"]([^"']+)["']/gm,
+          'Update the HTML with reference in input'
+        ]
+      };
+      var hp = new HTMLProcessor('', '', content, revvedfinder, undefined, options);
+      var replaced = hp.replaceWithRevved();
+      assert.equal(replaced, '<input type="image" src="' + filemapping['image.png'] + '" />');
+    });
   });
 
   describe('process', function () {
